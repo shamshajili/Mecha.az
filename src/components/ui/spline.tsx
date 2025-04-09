@@ -11,7 +11,6 @@ interface SplineSceneProps {
 export function SplineScene({ scene, className }: SplineSceneProps) {
   const [isLoading, setIsLoading] = useState(true)
 
-  // Handle loading state
   const handleLoad = () => {
     setIsLoading(false)
   }
@@ -34,7 +33,6 @@ export function SplineScene({ scene, className }: SplineSceneProps) {
         <Spline scene={scene} className={className} onLoad={handleLoad} />
       </Suspense>
 
-      {/* Highlight overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>

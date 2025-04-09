@@ -5,7 +5,7 @@ interface ButtonProps {
   variant?: "solid" | "outline";
   className?: string;
   onClick?: () => void;
-  children: React.ReactNode; // children'ı burada ekliyoruz
+  children: React.ReactNode; 
 }
 
 const Button: React.FC<ButtonProps> = ({ size = "md", variant = "solid", className, children, onClick }) => {
