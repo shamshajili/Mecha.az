@@ -7,9 +7,9 @@ export default function Navbar() {
   const [active, setActive] = useState("");
 
   return (
-    <nav className="bg-black text-gray-400 py-4 px-6 flex justify-between items-center border-b border-gray-700 fixed top-0 left-0 w-full z-50">
+    <nav className="bg-black/50 backdrop-blur-md text-gray-400 py-4 px-6 flex justify-between items-center border-b border-gray-700 fixed top-0 left-0 w-full z-50">
       {/* Logo */}
-      <div className="text-2xl font-medium">
+      <div className="text-3xl font-medium">
         <Link href="/" className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-500">
           MECHA.az
         </Link>

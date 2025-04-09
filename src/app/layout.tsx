@@ -1,22 +1,43 @@
-import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import Head from "next/head"; 
+import type React from "react"
+import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
+import { Inter, Space_Grotesk } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import "./globals.css"
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+// Fontları tanımlıyoruz
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", 
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space", 
+})
+
+export const metadata: Metadata = {
+  title: "MECHA.az | Building the Machine Layer of Tomorrow",
+  description: "Cutting-edge provider of robotics, IoT solutions, and smart manufacturing software.",
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en">
-      <Head>
-        <title>Mecha.az</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <body className="bg-black text-white pt-20">
-        <Navbar />
-        <div className="mt-24">
-          {children}
-        </div>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-black text-white`}>
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
