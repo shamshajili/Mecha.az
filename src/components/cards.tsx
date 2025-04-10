@@ -49,7 +49,7 @@ import {
 
   const FeaturesSection = () => {
     return (
-      <section className="py-20 bg-black text-white px-6">
+      <section className="py-5 bg-black text-white px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <div
