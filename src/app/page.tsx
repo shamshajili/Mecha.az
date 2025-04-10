@@ -117,11 +117,10 @@ const HeroSection = () => {
           </div>
         </section>
         <FeaturesIcon/>
-        <button className="bg-cyan-400 hover:bg-cyan-600 text-white font-medium mt-8 py-2 px-5 ml-66 rounded-lg flex items-center gap-2 transition">
+        <button className="bg-cyan-400 hover:bg-cyan-600 text-white font-medium mt-8 py-2 px-5 ml-70 rounded-lg flex items-center gap-2 transition">
               Explore Platform
               <ChevronRightIcon className="w-4 h-4 text-white" />
             </button>
-
             <Dashboard />
       </section>
     </Spotlight>

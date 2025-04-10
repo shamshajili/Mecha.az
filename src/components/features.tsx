@@ -38,7 +38,7 @@ import {
   
   const FeaturesIcon = () => {
     return (
-      <section className="py-5 bg-black text-white px-6">
+      <section className="py-5 bg-black text-white px-6 ml-17 mb-5">
         <div className="max-w-2xl mx-auto space-y-6">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start space-x-4">
