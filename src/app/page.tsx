@@ -8,7 +8,8 @@ import { Spotlight } from "@/components/ui/spotlight";
 import FeatureCards from "@/components/cards";
 import FeaturesIcon from "@/components/features";
 import Dashboard from "@/components/dashboard";
-import Footer from "@/components/footer";
+import { UseCasesSection } from "@/components/cases";
+import { ArrowRight } from "lucide-react"; 
 
 const HeroSection = () => {
   const [mounted, setMounted] = useState(false);
@@ -78,9 +79,9 @@ const HeroSection = () => {
                 className="w-full h-full"
               />
 
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 to-transparent"></div>
 
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-center text-muted-foreground bg-background/80 px-3 py-1 rounded-full backdrop-blur-sm">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-center text-muted-foreground bg-black/80 px-3 py-1 rounded-full backdrop-blur-sm">
                 Click and drag to interact with the 3D model
               </div>
             </div>
@@ -100,28 +101,63 @@ const HeroSection = () => {
             </p>
           </div>
         </section>
-        <FeatureCards/>
+        <FeatureCards />
         <section className="py-15 bg-black text-white ml-63 px-6 text-left">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl font-bold mb-3">
               <span className="text-white">Modular </span>
               <span className="bg-gradient-to-r from-cyan-400 to-green-400 text-transparent bg-clip-text">Platform </span>
-              <span className="text-white">Arhitectura</span>
+              <span className="text-white">Architecture</span>
             </h2>
 
             <p className="text-gray-400 text-lg mb-2">
-            Our platform provides a comprehensive suite of tools for device
+              Our platform provides a comprehensive suite of tools for device
               <span className="block text-gray-400 mt-1">management, real-time monitoring, and secure operations across your</span>
               <span className="block text-gray-400 mt-1">manufacturing ecosystem.</span>
             </p>
           </div>
         </section>
-        <FeaturesIcon/>
+        <FeaturesIcon />
         <button className="bg-cyan-400 hover:bg-cyan-600 text-white font-medium mt-8 py-2 px-5 ml-70 rounded-lg flex items-center gap-2 transition">
-              Explore Platform
-              <ChevronRightIcon className="w-4 h-4 text-white" />
+          Explore Platform
+          <ChevronRightIcon className="w-4 h-4 text-white" />
+        </button>
+        <Dashboard />
+        <UseCasesSection/>
+
+        <section className="py-20">
+  <div className="container mx-auto px-4">
+    <div className="relative rounded-lg overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#001b1d] to-[#002818] opacity-100 z-0"></div>
+
+      <div className="absolute inset-0 grid-pattern opacity-10 z-0"></div>
+
+      <div className="relative z-10 p-8 md:p-12">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-space mb-6">
+            Ready to Transform Your <span className="bg-gradient-to-r from-cyan-400 to-green-400 text-transparent bg-clip-text">Manufacturing Operations</span>?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Join the network of innovative manufacturers leveraging our robotics and IoT solutions to build the factories of tomorrow.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-cyan-400 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-lg flex items-center gap-2 transition">
+              Get Started <ArrowRight className="h-4 w-4" />
             </button>
-            <Dashboard />
+            <button className="border bg-black border-cyan-400 hover:bg-cyan-600 text-white font-medium py-2 px-6 rounded-lg flex items-center gap-2 transition">
+              Request Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
       </section>
     </Spotlight>
   );
