@@ -8,6 +8,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import FeatureCards from "@/components/cards";
 import FeaturesIcon from "@/components/features";
 import Dashboard from "@/components/dashboard";
+import Footer from "@/components/footer";
 
 const HeroSection = () => {
   const [mounted, setMounted] = useState(false);
@@ -123,7 +124,6 @@ const HeroSection = () => {
 
             <Dashboard />
       </section>
-      
     </Spotlight>
   );
 };
